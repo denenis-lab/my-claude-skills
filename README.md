@@ -31,7 +31,7 @@ See [screenshot/README.md](./screenshot/README.md) for details.
 
 ### `lfg` — Launch Claude Code in autonomous mode
 
-A shell alias to run Claude Code with `--dangerously-skip-permissions` (no confirmation prompts). Inspired by [Sergey Ris](https://github.com/serejaris/ris-claude-code) and his Claude Code workflow.
+A shell alias to run Claude Code with `--dangerously-skip-permissions` (no confirmation prompts). Inspired by [Sereja Ris](https://github.com/serejaris/ris-claude-code) and his Claude Code workflow.
 
 Add to your `~/.zshrc`:
 
@@ -49,8 +49,8 @@ Then just type `lfg` in any project directory to start a fully autonomous Claude
 |-------|--------|-------------|
 | [superpowers](https://github.com/obra/superpowers) | Jesse Vincent | TDD, debugging, brainstorming, code review, planning workflows |
 | [data](https://github.com/anthropics/claude-code/tree/main/plugins) | Anthropic | SQL, data visualization, dashboards, statistical analysis |
-| [macos-fixer](https://github.com/serejaris/ris-claude-code) | Sergey Ris | macOS memory diagnostics, performance troubleshooting |
-| [git-workflow-manager](https://github.com/serejaris/ris-claude-code) | Sergey Ris | Conventional commits, semantic versioning, changelogs |
+| [macos-fixer](https://github.com/serejaris/ris-claude-code) | Sereja Ris | macOS memory diagnostics, performance troubleshooting |
+| [git-workflow-manager](https://github.com/serejaris/ris-claude-code) | Sereja Ris | Conventional commits, semantic versioning, changelogs |
 
 ## License
 

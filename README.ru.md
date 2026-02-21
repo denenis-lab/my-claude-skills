@@ -43,6 +43,8 @@ alias lfg="claude --dangerously-skip-permissions"
 |-------|-------|---------|
 | [superpowers](https://github.com/obra/superpowers) | Jesse Vincent | TDD, отладка, брейнсторминг, код-ревью, планирование |
 | [data](https://github.com/anthropics/claude-code/tree/main/plugins) | Anthropic | SQL, визуализация данных, дашборды, статистика |
+| [macos-fixer](https://github.com/serejaris/ris-claude-code) | Сергей Рис | Диагностика памяти macOS, траблшутинг производительности |
+| [git-workflow-manager](https://github.com/serejaris/ris-claude-code) | Сергей Рис | Conventional commits, семантическое версионирование, changelogs |
 
 ## Лицензия
 

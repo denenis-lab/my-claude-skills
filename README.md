@@ -49,6 +49,8 @@ Then just type `lfg` in any project directory to start a fully autonomous Claude
 |-------|--------|-------------|
 | [superpowers](https://github.com/obra/superpowers) | Jesse Vincent | TDD, debugging, brainstorming, code review, planning workflows |
 | [data](https://github.com/anthropics/claude-code/tree/main/plugins) | Anthropic | SQL, data visualization, dashboards, statistical analysis |
+| [macos-fixer](https://github.com/serejaris/ris-claude-code) | Sergey Ris | macOS memory diagnostics, performance troubleshooting |
+| [git-workflow-manager](https://github.com/serejaris/ris-claude-code) | Sergey Ris | Conventional commits, semantic versioning, changelogs |
 
 ## License
 

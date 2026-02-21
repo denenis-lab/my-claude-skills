@@ -49,6 +49,7 @@ Then just type `lfg` in any project directory to start a fully autonomous Claude
 |-------|--------|-------------|
 | [superpowers](https://github.com/obra/superpowers) | Jesse Vincent | TDD, debugging, brainstorming, code review, planning workflows |
 | [data](https://github.com/anthropics/claude-code/tree/main/plugins) | Anthropic | SQL, data visualization, dashboards, statistical analysis |
+| [developing-with-streamlit](https://github.com/streamlit/agent-skills) | Streamlit | Production-grade Streamlit apps — design, performance, layouts, data display |
 | [macos-fixer](https://github.com/serejaris/ris-claude-code) | Sereja Ris | macOS memory diagnostics, performance troubleshooting |
 | [git-workflow-manager](https://github.com/serejaris/ris-claude-code) | Sereja Ris | Conventional commits, semantic versioning, changelogs |
 

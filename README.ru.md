@@ -21,6 +21,22 @@ cd screenshot && bash scripts/install.sh
 
 Подробнее в [screenshot/README.md](./screenshot/README.md).
 
+## Советы
+
+### `lfg` — запуск Claude Code в автономном режиме
+
+Shell-алиас для запуска Claude Code с `--dangerously-skip-permissions` (без подтверждений). Идея от [Сергея Риса](https://github.com/serejaris/ris-claude-code) и его воркфлоу для Claude Code.
+
+Добавь в `~/.zshrc`:
+
+```bash
+alias lfg="claude --dangerously-skip-permissions"
+```
+
+Потом просто набери `lfg` в директории проекта — Claude Code стартует в полностью автономном режиме.
+
+> **Внимание:** Пропускает все запросы на подтверждение. Используй только в доверенном окружении — Claude будет читать, писать и выполнять команды без вопросов.
+
 ## Сторонние скиллы
 
 | Скилл | Автор | Описание |

@@ -27,6 +27,22 @@ cd screenshot && bash scripts/install.sh
 
 See [screenshot/README.md](./screenshot/README.md) for details.
 
+## Tips & Tricks
+
+### `lfg` — Launch Claude Code in autonomous mode
+
+A shell alias to run Claude Code with `--dangerously-skip-permissions` (no confirmation prompts). Inspired by [Sergey Ris](https://github.com/serejaris/ris-claude-code) and his Claude Code workflow.
+
+Add to your `~/.zshrc`:
+
+```bash
+alias lfg="claude --dangerously-skip-permissions"
+```
+
+Then just type `lfg` in any project directory to start a fully autonomous Claude Code session.
+
+> **Warning:** This skips all permission prompts. Use only in trusted environments — Claude will read, write, and execute without asking.
+
 ## Third-Party Skills I Use
 
 | Skill | Author | Description |

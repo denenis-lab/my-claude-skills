@@ -49,6 +49,7 @@ Then just type `lfg` in any project directory to start a fully autonomous Claude
 |-------|--------|-------------|
 | [superpowers](https://github.com/obra/superpowers) | Jesse Vincent | TDD, debugging, brainstorming, code review, planning workflows |
 | [data](https://github.com/anthropics/claude-code/tree/main/plugins) | Anthropic | SQL, data visualization, dashboards, statistical analysis |
+| [skill-creator](https://github.com/anthropics/skills) | Anthropic | Meta-skill for creating, validating, and packaging new skills |
 | [frontend-design](https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design) | Anthropic | Distinctive, production-grade frontend UI with bold aesthetics |
 | [developing-with-streamlit](https://github.com/streamlit/agent-skills) | Streamlit | Production-grade Streamlit apps — design, performance, layouts, data display |
 | [frontend-slides](https://github.com/zarazhangrui/frontend-slides) | zarazhangrui | Animation-rich HTML presentations from scratch or PPT conversion |

@@ -25,7 +25,7 @@ cd screenshot && bash scripts/install.sh
 
 ### `lfg` — запуск Claude Code в автономном режиме
 
-Shell-алиас для запуска Claude Code с `--dangerously-skip-permissions` (без подтверждений). Идея от [Сергея Риса](https://github.com/serejaris/ris-claude-code) и его воркфлоу для Claude Code.
+Shell-алиас для запуска Claude Code с `--dangerously-skip-permissions` (без подтверждений). Идея от [Sereja Ris](https://github.com/serejaris/ris-claude-code) и его воркфлоу для Claude Code.
 
 Добавь в `~/.zshrc`:
 
@@ -43,8 +43,8 @@ alias lfg="claude --dangerously-skip-permissions"
 |-------|-------|---------|
 | [superpowers](https://github.com/obra/superpowers) | Jesse Vincent | TDD, отладка, брейнсторминг, код-ревью, планирование |
 | [data](https://github.com/anthropics/claude-code/tree/main/plugins) | Anthropic | SQL, визуализация данных, дашборды, статистика |
-| [macos-fixer](https://github.com/serejaris/ris-claude-code) | Сергей Рис | Диагностика памяти macOS, траблшутинг производительности |
-| [git-workflow-manager](https://github.com/serejaris/ris-claude-code) | Сергей Рис | Conventional commits, семантическое версионирование, changelogs |
+| [macos-fixer](https://github.com/serejaris/ris-claude-code) | Sereja Ris | Диагностика памяти macOS, траблшутинг производительности |
+| [git-workflow-manager](https://github.com/serejaris/ris-claude-code) | Sereja Ris | Conventional commits, семантическое версионирование, changelogs |
 
 ## Лицензия
 

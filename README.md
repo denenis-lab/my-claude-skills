@@ -1,6 +1,6 @@
 # My Claude Code Skills
 
-A collection of custom skills and references to third-party skills I use with [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+A collection of custom skills, hooks, and setup guides I use with [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
 
 ## Custom Skills
 
@@ -26,6 +26,32 @@ cd screenshot && bash scripts/install.sh
 ```
 
 See [screenshot/README.md](./screenshot/README.md) for details.
+
+## Hooks & Automation
+
+### [github-issues-memory](./github-issues-memory/)
+
+Use GitHub Issues + Projects as persistent task memory for Claude Code. The agent creates, updates, and closes issues automatically — you never lose context between sessions.
+
+- **SessionStart hook** — loads open issues when a session starts
+- **PostToolUse hook** — reminds to update issues after `git push`
+- **Rule file** — teaches the agent the workflow
+
+Based on articles by [Sereja Ris](https://sereja.tech/blog/github-projects-ai-agent-memory/).
+
+## Setup Guides
+
+### [multi-account-sync](./multi-account-sync/)
+
+Sync Claude Code configuration (skills, rules, settings) between multiple macOS user accounts on the same machine using `/Users/Shared/` and symlinks. No Git required for same-machine sync.
+
+Based on [sync article](https://sereja.tech/blog/sync-claude-code-four-machines/) by Sereja Ris.
+
+### "Fix Once, Rule Forever" approach
+
+Instead of fixing the same mistake twice, write a rule in `~/.claude/rules/` so the agent never repeats it. Rules are auto-loaded every session, scoped by file path patterns.
+
+Based on [Sereja Ris's article](https://sereja.tech/blog/fix-once-rule-forever/).
 
 ## Tips & Tricks
 
@@ -55,6 +81,17 @@ Then just type `lfg` in any project directory to start a fully autonomous Claude
 | [frontend-slides](https://github.com/zarazhangrui/frontend-slides) | zarazhangrui | Animation-rich HTML presentations from scratch or PPT conversion |
 | [macos-fixer](https://github.com/serejaris/ris-claude-code) | Sereja Ris | macOS memory diagnostics, performance troubleshooting |
 | [git-workflow-manager](https://github.com/serejaris/ris-claude-code) | Sereja Ris | Conventional commits, semantic versioning, changelogs |
+
+## Useful Reading
+
+Articles that shaped this setup:
+
+- [GitHub Projects как память для AI-агента](https://sereja.tech/blog/github-projects-ai-agent-memory/) — Sereja Ris
+- [Хуки Claude Code: агент сам ведёт задачи](https://sereja.tech/blog/claude-code-hooks-github-issues/) — Sereja Ris
+- [Как я синхронизирую Claude Code на четырёх компах](https://sereja.tech/blog/sync-claude-code-four-machines/) — Sereja Ris
+- [Правка → Правило: как научить агента не повторять ошибки](https://sereja.tech/blog/fix-once-rule-forever/) — Sereja Ris
+- [Модульные правила: как не утонуть в CLAUDE.md](https://sereja.tech/blog/modular-rules-claude-md/) — Sereja Ris
+- [Claude Code получил память между сессиями](https://sereja.tech/blog/claude-code-auto-memory/) — Sereja Ris
 
 ## License
 

@@ -1,6 +1,6 @@
 # Мои скиллы для Claude Code
 
-Коллекция кастомных скиллов и ссылки на сторонние скиллы, которые я использую с [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+Коллекция кастомных скиллов, хуков и гайдов по настройке [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
 
 ## Кастомные скиллы
 
@@ -21,11 +21,37 @@ cd screenshot && bash scripts/install.sh
 
 Подробнее в [screenshot/README.md](./screenshot/README.md).
 
+## Хуки и автоматизация
+
+### [github-issues-memory](./github-issues-memory/)
+
+GitHub Issues + Projects как постоянная память агента. Агент сам создаёт, обновляет и закрывает issues — контекст не теряется между сессиями.
+
+- **SessionStart hook** — загружает открытые issues при старте сессии
+- **PostToolUse hook** — напоминает обновить issues после `git push`
+- **Rule-файл** — объясняет агенту воркфлоу
+
+По мотивам статей [Sereja Ris](https://sereja.tech/blog/github-projects-ai-agent-memory/).
+
+## Гайды по настройке
+
+### [multi-account-sync](./multi-account-sync/)
+
+Синхронизация конфига Claude Code (скиллы, правила, настройки) между несколькими учётками macOS на одной машине через `/Users/Shared/` и symlinks. Git не нужен для синхронизации на одном компьютере.
+
+По мотивам [статьи о синхронизации](https://sereja.tech/blog/sync-claude-code-four-machines/) Sereja Ris.
+
+### Подход "Правка → Правило"
+
+Вместо того чтобы чинить одну и ту же ошибку дважды — записываем правило в `~/.claude/rules/`, чтобы агент больше её не повторял. Правила загружаются автоматически каждую сессию, можно фильтровать по путям файлов.
+
+По мотивам [статьи](https://sereja.tech/blog/fix-once-rule-forever/) Sereja Ris.
+
 ## Советы
 
 ### `lfg` — запуск Claude Code в автономном режиме
 
-Shell-алиас для запуска Claude Code с `--dangerously-skip-permissions` (без подтверждений). Идея от [Sereja Ris](https://github.com/serejaris/ris-claude-code) и его воркфлоу для Claude Code.
+Shell-алиас для запуска Claude Code с `--dangerously-skip-permissions` (без подтверждений). Идея от [Sereja Ris](https://github.com/serejaris/ris-claude-code).
 
 Добавь в `~/.zshrc`:
 
@@ -33,9 +59,7 @@ Shell-алиас для запуска Claude Code с `--dangerously-skip-permis
 alias lfg="claude --dangerously-skip-permissions"
 ```
 
-Потом просто набери `lfg` в директории проекта — Claude Code стартует в полностью автономном режиме.
-
-> **Внимание:** Пропускает все запросы на подтверждение. Используй только в доверенном окружении — Claude будет читать, писать и выполнять команды без вопросов.
+> **Внимание:** Пропускает все запросы на подтверждение. Используй только в доверенном окружении.
 
 ## Сторонние скиллы
 
@@ -49,6 +73,17 @@ alias lfg="claude --dangerously-skip-permissions"
 | [frontend-slides](https://github.com/zarazhangrui/frontend-slides) | zarazhangrui | HTML-презентации с анимациями, конвертация из PPT |
 | [macos-fixer](https://github.com/serejaris/ris-claude-code) | Sereja Ris | Диагностика памяти macOS, траблшутинг производительности |
 | [git-workflow-manager](https://github.com/serejaris/ris-claude-code) | Sereja Ris | Conventional commits, семантическое версионирование, changelogs |
+
+## Полезное чтение
+
+Статьи, которые повлияли на этот сетап:
+
+- [GitHub Projects как память для AI-агента](https://sereja.tech/blog/github-projects-ai-agent-memory/) — Sereja Ris
+- [Хуки Claude Code: агент сам ведёт задачи](https://sereja.tech/blog/claude-code-hooks-github-issues/) — Sereja Ris
+- [Как я синхронизирую Claude Code на четырёх компах](https://sereja.tech/blog/sync-claude-code-four-machines/) — Sereja Ris
+- [Правка → Правило: как научить агента не повторять ошибки](https://sereja.tech/blog/fix-once-rule-forever/) — Sereja Ris
+- [Модульные правила: как не утонуть в CLAUDE.md](https://sereja.tech/blog/modular-rules-claude-md/) — Sereja Ris
+- [Claude Code получил память между сессиями](https://sereja.tech/blog/claude-code-auto-memory/) — Sereja Ris
 
 ## Лицензия
 

@@ -39,6 +39,16 @@ Use GitHub Issues + Projects as persistent task memory for Claude Code. The agen
 
 Based on articles by [Sereja Ris](https://sereja.tech/blog/github-projects-ai-agent-memory/).
 
+### [remote-control](./remote-control/)
+
+Connect to a running Claude Code terminal session from your phone or any device. Start a task on your laptop, pick it up from the couch.
+
+- Run `claude rc` in a separate terminal → get a link + QR code
+- Open the link on your phone (web or Claude iOS app)
+- Requires **Max** subscription (Pro coming soon)
+
+See [remote-control/README.md](./remote-control/README.md) for details.
+
 ## Setup Guides
 
 ### [multi-account-sync](./multi-account-sync/)

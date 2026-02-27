@@ -21,6 +21,16 @@ cd screenshot && bash scripts/install.sh
 
 Подробнее в [screenshot/README.md](./screenshot/README.md).
 
+### [remote-control](./remote-control/)
+
+Подключайся к терминальной сессии Claude Code с телефона или любого устройства. Запусти задачу на ноутбуке — продолжи с дивана.
+
+- Запусти `claude rc` в отдельном терминале → получишь ссылку + QR-код
+- Открой ссылку на телефоне (веб или Claude iOS app)
+- Нужна подписка **Max** (Pro — скоро)
+
+Подробнее в [remote-control/README.md](./remote-control/README.md).
+
 ## Хуки и автоматизация
 
 ### [github-issues-memory](./github-issues-memory/)

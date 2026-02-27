@@ -1,48 +1,48 @@
-# Remote Control — Claude Code с телефона
+# Remote Control — Claude Code from Your Phone
 
-Подключайся к терминальной сессии Claude Code с телефона или любого устройства через веб или мобильное приложение Claude.
+Connect to a running Claude Code terminal session from your phone or any device via web or the Claude mobile app.
 
-## Требования
+## Requirements
 
 - **Claude Code** ≥ 2.1.52
-- Подписка **Max** (Pro — скоро)
+- **Max** subscription (Pro — coming soon)
 
-## Быстрый старт
+## Quick Start
 
 ```bash
-# В терминале — запусти Remote Control
+# In a separate terminal — start Remote Control
 claude rc
 
-# Подтверди 'y' → получишь ссылку и QR-код
-# Открой ссылку на телефоне или отсканируй QR
+# Confirm 'y' → get a link + QR code
+# Open the link on your phone or scan the QR
 ```
 
-## Как подключиться
+## How to Connect
 
-| Способ | Как |
+| Method | How |
 |--------|-----|
-| **Веб** | Открой ссылку `claude.ai/code/session_...` в любом браузере |
-| **iOS app** | Открой ссылку в Safari → предложит открыть в приложении |
-| **Другой комп** | Открой ту же ссылку в любом браузере |
+| **Web** | Open `claude.ai/code/session_...` link in any browser |
+| **iOS app** | Open the link in Safari → it offers to open in the app |
+| **Another computer** | Open the same link in any browser |
 
-## Внутри сессии
+## Inside an Active Session
 
-Можно также включить через slash-команду:
+You can also enable it via slash command:
 
 ```
 /remote-control
 ```
 
-Или через `/rc`.
+Or the shortcut `/rc`.
 
-## Важно
+## Important Notes
 
-- `claude rc` нельзя запускать **внутри** сессии Claude Code (вложенные сессии запрещены)
-- Запускай в **отдельном терминале**
-- Токен доступа временный — после завершения сессии ссылка перестаёт работать
-- Код остаётся на твоей машине, ничего не уходит в облако
+- `claude rc` cannot be run **inside** a Claude Code session (nested sessions are not allowed)
+- Run it in a **separate terminal**
+- The access token is temporary — the link stops working after the session ends
+- Your code stays on your machine, nothing is sent to the cloud
 
-## Документация
+## Documentation
 
-- [Официальная документация Remote Control](https://code.claude.com/docs/en/remote-control)
+- [Official Remote Control docs](https://code.claude.com/docs/en/remote-control)
 - [Claude Code Desktop](https://code.claude.com/docs/en/desktop)

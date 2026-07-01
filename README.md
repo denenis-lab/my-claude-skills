@@ -65,35 +65,7 @@ cp analyze-patterns/scripts/pattern-detector.py ~/.claude/skills/analyze-pattern
 
 See [analyze-patterns/README.md](./analyze-patterns/README.md) for details.
 
-## Hooks & Automation
-
-### [github-issues-memory](./github-issues-memory/)
-
-Use GitHub Issues + Projects as persistent task memory for Claude Code. The agent creates, updates, and closes issues automatically — you never lose context between sessions.
-
-- **SessionStart hook** — loads open issues when a session starts
-- **PostToolUse hook** — reminds to update issues after `git push`
-- **Rule file** — teaches the agent the workflow
-
-Based on articles by [Sereja Ris](https://sereja.tech/blog/github-projects-ai-agent-memory/).
-
-### [remote-control](./remote-control/)
-
-Connect to a running Claude Code terminal session from your phone or any device. Start a task on your laptop, pick it up from the couch.
-
-- Run `claude rc` in a separate terminal → get a link + QR code
-- Open the link on your phone (web or Claude iOS app)
-- Requires **Max** subscription (Pro coming soon)
-
-See [remote-control/README.md](./remote-control/README.md) for details.
-
 ## Setup Guides
-
-### [multi-account-sync](./multi-account-sync/)
-
-Sync Claude Code configuration (skills, rules, settings) between multiple macOS user accounts on the same machine using `/Users/Shared/` and symlinks. No Git required for same-machine sync.
-
-Based on [sync article](https://sereja.tech/blog/sync-claude-code-four-machines/) by Sereja Ris.
 
 ### "Fix Once, Rule Forever" approach
 
@@ -134,9 +106,6 @@ Then just type `lfg` in any project directory to start a fully autonomous Claude
 
 Articles that shaped this setup:
 
-- [GitHub Projects как память для AI-агента](https://sereja.tech/blog/github-projects-ai-agent-memory/) — Sereja Ris
-- [Хуки Claude Code: агент сам ведёт задачи](https://sereja.tech/blog/claude-code-hooks-github-issues/) — Sereja Ris
-- [Как я синхронизирую Claude Code на четырёх компах](https://sereja.tech/blog/sync-claude-code-four-machines/) — Sereja Ris
 - [Правка → Правило: как научить агента не повторять ошибки](https://sereja.tech/blog/fix-once-rule-forever/) — Sereja Ris
 - [Модульные правила: как не утонуть в CLAUDE.md](https://sereja.tech/blog/modular-rules-claude-md/) — Sereja Ris
 - [Claude Code получил память между сессиями](https://sereja.tech/blog/claude-code-auto-memory/) — Sereja Ris

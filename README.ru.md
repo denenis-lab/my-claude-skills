@@ -21,6 +21,18 @@ cd screenshot && bash scripts/install.sh
 
 Подробнее в [screenshot/README.md](./screenshot/README.md).
 
+### [browser](./browser/)
+
+Дать Claude Code «глаза» в реальном браузере через Chrome DevTools Protocol. Без MCP-сервера и npm — только `curl` и `python3`.
+
+**Как работает:**
+- Запускает Chrome Canary с изолированным bot-профилем (`~/.chromium-bot`)
+- Подключается по CDP на `localhost:9222`
+- Список вкладок, открытие URL, чтение содержимого страницы
+- Твой основной Chrome не затрагивается
+
+Подробнее в [browser/README.md](./browser/README.md).
+
 ### [analyze-patterns](./analyze-patterns/)
 
 Анализ транскриптов сессий Claude Code — находит повторяющиеся паттерны поведения: коррекции, частые инструменты, брошенные задачи и случаи, когда Claude сопротивляется инструкциям.
@@ -40,35 +52,7 @@ cp analyze-patterns/scripts/pattern-detector.py ~/.claude/skills/analyze-pattern
 
 Подробнее в [analyze-patterns/README.md](./analyze-patterns/README.md).
 
-### [remote-control](./remote-control/)
-
-Подключайся к терминальной сессии Claude Code с телефона или любого устройства. Запусти задачу на ноутбуке — продолжи с дивана.
-
-- Запусти `claude rc` в отдельном терминале → получишь ссылку + QR-код
-- Открой ссылку на телефоне (веб или Claude iOS app)
-- Нужна подписка **Max** (Pro — скоро)
-
-Подробнее в [remote-control/README.md](./remote-control/README.md).
-
-## Хуки и автоматизация
-
-### [github-issues-memory](./github-issues-memory/)
-
-GitHub Issues + Projects как постоянная память агента. Агент сам создаёт, обновляет и закрывает issues — контекст не теряется между сессиями.
-
-- **SessionStart hook** — загружает открытые issues при старте сессии
-- **PostToolUse hook** — напоминает обновить issues после `git push`
-- **Rule-файл** — объясняет агенту воркфлоу
-
-По мотивам статей [Sereja Ris](https://sereja.tech/blog/github-projects-ai-agent-memory/).
-
 ## Гайды по настройке
-
-### [multi-account-sync](./multi-account-sync/)
-
-Синхронизация конфига Claude Code (скиллы, правила, настройки) между несколькими учётками macOS на одной машине через `/Users/Shared/` и symlinks. Git не нужен для синхронизации на одном компьютере.
-
-По мотивам [статьи о синхронизации](https://sereja.tech/blog/sync-claude-code-four-machines/) Sereja Ris.
 
 ### Подход "Правка → Правило"
 
@@ -107,9 +91,6 @@ alias lfg="claude --dangerously-skip-permissions"
 
 Статьи, которые повлияли на этот сетап:
 
-- [GitHub Projects как память для AI-агента](https://sereja.tech/blog/github-projects-ai-agent-memory/) — Sereja Ris
-- [Хуки Claude Code: агент сам ведёт задачи](https://sereja.tech/blog/claude-code-hooks-github-issues/) — Sereja Ris
-- [Как я синхронизирую Claude Code на четырёх компах](https://sereja.tech/blog/sync-claude-code-four-machines/) — Sereja Ris
 - [Правка → Правило: как научить агента не повторять ошибки](https://sereja.tech/blog/fix-once-rule-forever/) — Sereja Ris
 - [Модульные правила: как не утонуть в CLAUDE.md](https://sereja.tech/blog/modular-rules-claude-md/) — Sereja Ris
 - [Claude Code получил память между сессиями](https://sereja.tech/blog/claude-code-auto-memory/) — Sereja Ris

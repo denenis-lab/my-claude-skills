@@ -109,7 +109,6 @@ Before creating, check for duplicates:
 gh issue list --repo <OWNER>/<REPO> --label pattern --state all --json title -q ".[].title"
 ```
 
-**Note:** If you use GitHub Projects as task memory, add the issue to your project board after creation. See the [github-issues-memory](../github-issues-memory/) skill for the workflow.
 
 ## Step 5: Update state
 
